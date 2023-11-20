@@ -25,7 +25,7 @@ export default {
 		const addNormalMesssage = () => {
 			normalMessage = normalMessage + '!';
 		};
-		console.log('isRef(normalMessage): ', isRef(normalMessage));
+		console.log('isRef(normalMessage): ', isRef(normalMessage)); //반응형 api인지 확인
 
 		onMounted(() => {
 			console.log('onMounted');
