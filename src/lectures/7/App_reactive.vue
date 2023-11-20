@@ -9,7 +9,7 @@
 import { reactive } from 'vue';
 
 export default {
-	// date() {
+	// data() {
 	// 	return {};
 	// }, 내부적으로 return된 객체는 reactive 함수로 감싸지는것.
 	setup() {
