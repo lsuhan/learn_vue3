@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Vite App</title>
+    <style>
+      [v-cloak] {
+        display: none
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="app">
+      <!-- v-cloak 사용시 타이머가 존재할때(현재소스 3초 딜레이) 딜레이 동안 v-cloak 을 띄워주고 3초뒤에 v-cloak 이 사라짐. 이걸 이용해 로딩바 같은걸 구현하기 편할듯  -->
+      <p v-cloak>{{message}}</p>
+ 
+    </div>
+    <script>
+      const App = {
+        data(){
+          return{
+            message: '안녕'
+          }
+        }
+      }
+      setTimeout(() => {
+        Vue.createApp(App).mount('#app')
+      }, 3000)
+
+
+    </script>
+  </body>
+</html>

@@ -13,6 +13,7 @@ module.exports = {
 	},
 	rules: {
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+		'no-unused-vars': 'off', //사용하지 않는 변수가 있을시 에러 off
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'prettier/prettier': [
 			'error',
