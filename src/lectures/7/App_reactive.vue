@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { reactive } from 'vue';
+import { nextTick, reactive } from 'vue';
 
 export default {
 	// data() {
@@ -20,9 +20,11 @@ export default {
 			},
 		});
 
-		const increment = () => {
+		const increment = async () => {
 			state.count++;
 			state.deep.count++;
+			await nextTick(); // 상태 변경 후 dom 업데이트가 완료될 때 까지 기다리려면  nextTick() 전역 API를 사용할 수 있습니다;
+			//이제 DOM이 업데이트 됐습니다.
 		};
 		return {
 			state,
