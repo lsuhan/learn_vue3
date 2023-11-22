@@ -65,7 +65,8 @@ export default {
 		count: Number,
 	},
 	setup(props) {
-		console.log(props.count);
+		//props 를 setup 에서 받아서 사용할 수 있다.
+		// console.log(props.count);
 		return {};
 	},
 };
