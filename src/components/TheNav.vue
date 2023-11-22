@@ -1,4 +1,5 @@
 <template>
+	{{ count }}
 	<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Navbar</a>
@@ -60,7 +61,11 @@
 
 <script>
 export default {
-	setup() {
+	props: {
+		count: Number,
+	},
+	setup(props) {
+		console.log(props.count);
 		return {};
 	},
 };
